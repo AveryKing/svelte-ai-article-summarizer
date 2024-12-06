@@ -28,7 +28,7 @@ export async function load() {
 
 				summary.set('Processing article...');
 
-				const genAI = new GoogleGenerativeAI(PUBGOOGLE_API_KEY);
+				const genAI = new GoogleGenerativeAI(PUBLIC_GOOGLE_API_KEY);
 				const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 				const res = await model.generateContent(
 					`Summarize the following Medium article:\n\n${postContent}`
