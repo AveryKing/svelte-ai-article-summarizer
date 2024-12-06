@@ -10,7 +10,7 @@ export async function load() {
 		chrome.tabs.query({ currentWindow: true, active: true }, async (tabs) => {
 			const tab = tabs[0];
 
-			if (!tab?.url?.includes('https://medium.com')) {
+			if (!tab?.url?.includes('medium.com')) {
 				onMedium.set(false);
 				summary.set('');
 				return;
@@ -28,7 +28,7 @@ export async function load() {
 
 				summary.set('Processing article...');
 
-				const genAI = new GoogleGenerativeAI(PUBLIC_GOOGLE_API_KEY);
+				const genAI = new GoogleGenerativeAI(PUBGOOGLE_API_KEY);
 				const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 				const res = await model.generateContent(
 					`Summarize the following Medium article:\n\n${postContent}`
