@@ -1,0 +1,10 @@
+{
+	"manifest_version": 3,
+	"name": "AI article summarizer",
+	"version": "1.0.0",
+	"description": "This extension summarizes Medium articles using AI",
+	"permissions": ["scripting", "activeTab"],
+	"action": {
+		"default_popup": "popup.html"
+	}
+}

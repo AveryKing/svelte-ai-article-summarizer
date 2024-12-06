@@ -29,6 +29,7 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"@google/generative-ai": "^0.21.0",
 		"sveltekit-adapter-chrome-extension": "^2.0.1"
 	}
 }
